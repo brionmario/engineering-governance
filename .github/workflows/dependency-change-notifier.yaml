@@ -7,6 +7,7 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    permissions: {}
     steps:
     - name: Send notification to Google Chat
       env:
@@ -49,5 +50,6 @@ jobs:
            }')
         curl -X POST -H 'Content-Type: application/json' \
           --fail --silent --show-error \
+          --connect-timeout 10 --max-time 30 \
           -d "$body" \
           "${WEBHOOK_URL}&messageReplyOption=REPLY_MESSAGE_FALLBACK_TO_NEW_THREAD"
