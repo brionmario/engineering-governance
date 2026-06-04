@@ -294,3 +294,27 @@ dependencies:
       - version: ">=v1.6.0"
         allowed_scopes:
           - "*"
+
+  - module: github.com/gorilla/websocket
+    versions:
+      - version: ">=v1.5.3"
+        allowed_scopes:
+          - "*"
+
+  - module: github.com/twmb/franz-go
+    versions:
+      - version: ">=v1.18.1"
+        allowed_scopes:
+          - "*"
+
+  - module: github.com/twmb/franz-go/pkg/kadm
+    versions:
+      - version: ">=v1.14.0"
+        allowed_scopes:
+          - "*"
+
+  - module: github.com/twmb/franz-go/pkg/kmsg
+    versions:
+      - version: ">=v1.9.0"
+        allowed_scopes:
+          - "*"
